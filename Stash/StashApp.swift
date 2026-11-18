@@ -1,4 +1,6 @@
 import SwiftUI
+import SwiftData
+import Models
 
 @main
 struct StashApp: App {
@@ -6,5 +8,6 @@ struct StashApp: App {
         WindowGroup {
             RootView()
         }
+        .modelContainer(for: StashSchema.models)
     }
 }
