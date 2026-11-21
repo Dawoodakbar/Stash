@@ -7,6 +7,8 @@ import SwiftData
 /// store can be synced with iCloud later without a migration.
 @Model
 public final class Receipt {
+    
+    public var uid : UUID = UUID()
     public var merchant: String = ""
     /// Money is always `Decimal`: `Double` rounding produces wrong totals.
     public var total: Decimal = 0
